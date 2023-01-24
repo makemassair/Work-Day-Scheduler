@@ -16,7 +16,6 @@ function displayTime() {
     currentDay.text(today)
 };
 
-
 for (let i = hours.dayStart; i <= hours.dayEnd; i++) {
     let textAreaWrapper = $("<row>")
     let btnSave = $("<button>")
