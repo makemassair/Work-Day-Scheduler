@@ -28,4 +28,11 @@ SO THAT I can manage my time effectively
 
 * Persist events between refreshes of a page.
 
+### Deployed Application
+
+View the deployed application for week-7: Work Day Scheduler at [makemassair.github.io](https://makemassair.github.io/Work-Day-Scheduler/).
+
+### Screenshot
+
+![image](screenshot.jpg)
 
