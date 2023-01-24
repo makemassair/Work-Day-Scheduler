@@ -1,0 +1,91 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: none;
+  padding: 10px;
+  width: calc(100% - 176px);
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
+
+.description {
+  white-space: pre-wrap;
+}
+
+.time-block {
+  text-align: center;
+  border-radius: 15px;
+}
+
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  border-top: 1px solid white;
+}
+
+.timeSlot {
+  border-top: 1px dashed rgba(0,0,0,0.3);
+  padding: 8px;
+  width: 88px;
+}
+
+.hour {
+  background-color: #ffffff;
+  color: #000000;
+  border-top: 1px dashed #000000;
+}
+
+.past {
+  background-color: #d3d3d3;
+  color: white;
+}
+
+.present {
+  background-color: #ff6961;
+  color: white;
+}
+
+.future {
+  background-color: #77dd77;
+  color: white;
+}
+
+.saveBtn {
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #06aed5;
+  color: white;
+  font-size: 16px;
+  width: 88px;
+}
+
+.saveBtn:hover {
+  background-color: #006699;
+  transition: all 0.15s ease-in-out;
+}
+
+#schedule textarea{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid red;
+  width: 100%;
+}
+
+.hideMessage {
+  visibility: hidden;
+}
