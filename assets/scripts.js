@@ -1,28 +1,14 @@
-// // Displayed the current day
-// const currentDay = $('#currentDay');
-// const schedule = $('#schedule');
-
-// setInterval(() => {
-//     currentDay.text(moment().format('dddd, MMMM Do'))
-// }, 1000);
-
-// var hours = { start: 8, end: 18 };
-// for (let i = hours.start; i <= hours.end; i++) {
-//     let textAreaWrapper = $("<div>");
-//     let textArea = $("<li><textarea>");
-//     schedule.append(textArea);
-// }
-
+// Set constants
 const currentDay = $("#currentDay");
 const container = $(".container");
 // $("#saved-message").hide()
 
 var hours = { 
-    start: 9, // start of day
-    end: 18 
+    dayStart: 9, // start of day 
+    dayEnd: 18 // end of day
 };
 
-// handle displaying the time
+// handle to display the time
 displayTime();
 
 function displayTime() {
@@ -31,7 +17,7 @@ function displayTime() {
 };
 
 
-for (let i = hours.start; i <= hours.end; i++) {
+for (let i = hours.dayStart; i <= hours.dayEnd; i++) {
     let textAreaWrapper = $("<row>")
     let btnSave = $("<button>")
 
@@ -47,7 +33,7 @@ for (let i = hours.start; i <= hours.end; i++) {
     textarea.val(localStorage.getItem(i));
     container.append(textAreaWrapper);
 
-    // Time slot
+    // prints hour slot on schedule
     let displayHour = moment(`2023-01-01T${i < 10 ? "0" + i : i}:00:00`).format("ha")
     let displayLabel = $('<label>')
     .addClass("timeSlot")
@@ -59,7 +45,7 @@ for (let i = hours.start; i <= hours.end; i++) {
     textAreaWrapper.append(textarea);
     textAreaWrapper.append(btnSave);
 
-    // Identify if time slot is past, present of future
+    // identifies if time slot is past, present of future
     let currentTime = moment().format("H");
     if (i < currentTime) {
       textarea.addClass("past");
@@ -70,11 +56,11 @@ for (let i = hours.start; i <= hours.end; i++) {
     };
 };
 
+// saving to local storage
 function saveBtnHandler(e) {
   let button = $(e.currentTarget)
   let hour = button.attr("data-hour")
   let textarea = $(`#${hour}`)
-
 
   if (textarea.val().trim() === "") {
     localStorage.removeItem(hour)
@@ -86,6 +72,7 @@ function saveBtnHandler(e) {
   }
 };
 
+// confirmation display message
 function displaySavedMessage() {
   let displayMessage = $("#saved-message")
   displayMessage.toggleClass("hideMessage");
