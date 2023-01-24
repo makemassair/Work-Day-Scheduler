@@ -5,7 +5,7 @@ const container = $(".container");
 
 var hours = { 
     dayStart: 9, // start of day 
-    dayEnd: 18 // end of day
+    dayEnd: 17 // end of day
 };
 
 // handle to display the time

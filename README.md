@@ -35,4 +35,3 @@ View the deployed application for week-7: Work Day Scheduler at [makemassair.git
 ### Screenshot
 
 ![image](screenshot.jpg)
-
