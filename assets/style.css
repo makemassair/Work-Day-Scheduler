@@ -15,11 +15,11 @@ textarea {
 }
 
 .jumbotron {
-  text-align: center;
   background-color: transparent;
-  color: black;
-  border-radius: 0;
   border-bottom: 10px solid black;
+  border-radius: 0;
+  color: black;
+  text-align: center;
 }
 
 .description {
@@ -27,14 +27,14 @@ textarea {
 }
 
 .time-block {
-  text-align: center;
   border-radius: 15px;
+  text-align: center;
 }
 
 .row {
-  white-space: pre-wrap;
-  height: 80px;
   border-top: 1px solid white;
+  height: 80px;
+  white-space: pre-wrap;
 }
 
 .timeSlot {
@@ -45,31 +45,31 @@ textarea {
 
 .hour {
   background-color: #ffffff;
-  color: #000000;
   border-top: 1px dashed #000000;
+  color: #000000;
+}
+
+.past, .present, .future, .saveBtn {
+  color: white;
 }
 
 .past {
   background-color: #d3d3d3;
-  color: white;
 }
 
 .present {
   background-color: #ff6961;
-  color: white;
 }
 
 .future {
   background-color: #77dd77;
-  color: white;
 }
 
 .saveBtn {
+  background-color: #06aed5;
   border: none;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #06aed5;
-  color: white;
   font-size: 16px;
   width: 88px;
 }
@@ -77,13 +77,6 @@ textarea {
 .saveBtn:hover {
   background-color: #006699;
   transition: all 0.15s ease-in-out;
-}
-
-#schedule textarea{
-  display: flex;
-  flex-direction: column;
-  border: 2px solid red;
-  width: 100%;
 }
 
 .hideMessage {
